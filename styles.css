@@ -1,0 +1,213 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #f5f5f5;
+    --text-color: #333;
+    --animation-speed: 0.5s;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    width: 90%;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: var(--primary-color);
+    transition: color var(--animation-speed) ease;
+}
+
+.theme-options, .animation-options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform var(--animation-speed) ease, 
+                background-color var(--animation-speed) ease,
+                box-shadow var(--animation-speed) ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+}
+
+.animation-box {
+    width: 100px;
+    height: 100px;
+    background-color: var(--primary-color);
+    margin: 2rem auto;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Rotate Animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Wave Animation */
+@keyframes wave {
+    0% {
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    }
+    25% {
+        border-radius: 60% 40% 70% 30% / 30% 60% 40% 70%;
+    }
+    50% {
+        border-radius: 30% 70% 40% 60% / 70% 30% 60% 40%;
+    }
+    75% {
+        border-radius: 40% 60% 30% 70% / 60% 40% 70% 30%;
+    }
+    100% {
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    }
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 5px;
+    transform: translateX(200%);
+    transition: transform 0.3s ease;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.section {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 2rem;
+}
+
+.animation-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Theme styles */
+.theme-blue {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #f5f5f5;
+    --text-color: #333;
+}
+
+.theme-dark {
+    --primary-color: #9b59b6;
+    --secondary-color: #e74c3c;
+    --background-color: #222;
+    --text-color: #f5f5f5;
+}
+
+.theme-warm {
+    --primary-color: #e67e22;
+    --secondary-color: #f39c12;
+    --background-color: #f9f4e8;
+    --text-color: #34495e;
+}
+
+/* Animation speed preferences */
+.speed-slow {
+    --animation-speed: 2s;
+}
+
+.speed-medium {
+    --animation-speed: 1s;
+}
+
+.speed-fast {
+    --animation-speed: 0.3s;
+}
+
+footer {
+    margin-top: auto;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    transition: background-color var(--animation-speed) ease;
+}

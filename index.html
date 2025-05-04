@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Preferences with CSS Animations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="notification" id="notification">Preferences saved!</div>
+    
+    <div class="container">
+        <header>
+            <h1>Theme and Animation Preferences</h1>
+            <p>Customize the look and feel of this page. Your preferences will be saved for your next visit!</p>
+        </header>
+        
+        <section class="section">
+            <h2>Theme Selection</h2>
+            <p>Choose a theme that suits your style:</p>
+            <div class="theme-options">
+                <button class="btn" data-theme="theme-blue">Blue Theme</button>
+                <button class="btn" data-theme="theme-dark">Dark Theme</button>
+                <button class="btn" data-theme="theme-warm">Warm Theme</button>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Animation Speed</h2>
+            <p>Set your preferred animation speed:</p>
+            <div class="animation-options">
+                <button class="btn" data-speed="speed-slow">Slow</button>
+                <button class="btn" data-speed="speed-medium">Medium</button>
+                <button class="btn" data-speed="speed-fast">Fast</button>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Animation Box</h2>
+            <p>Click the buttons below to see different animations:</p>
+            <div class="animation-box" id="animationBox"></div>
+            <div class="animation-controls">
+                <button class="btn btn-secondary" data-animation="pulse">Pulse</button>
+                <button class="btn btn-secondary" data-animation="rotate">Rotate</button>
+                <button class="btn btn-secondary" data-animation="bounce">Bounce</button>
+                <button class="btn btn-secondary" data-animation="wave">Wave</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Reset Preferences</h2>
+            <p>Clear all saved preferences and return to defaults:</p>
+            <button class="btn" id="resetBtn">Reset All Preferences</button>
+        </section>
+    </div>
+
+    <footer>
+        <p>CSS3 Transitions, Animations, and Advanced JavaScript Functions Demo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
